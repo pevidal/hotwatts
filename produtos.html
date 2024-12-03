@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Funnel+Display:wght@300..800&family=Gravitas+One&family=Lexend+Zetta:wght@100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Funnel+Display:wght@300..800&family=Gravitas+One&family=Lexend+Zetta:wght@100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Hotwatts</title>
+  
+    <hr class="featurette-divider" >    <style>
+        .card {
+            border: none;
+        }
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+    #logo {
+    transition: all 0.3s ease; /* Suaviza a alteração do tamanho */
+
+}
+html, body {
+        margin: 0;
+        padding-top: 70px;
+        width: 100%;
+    }
+
+
+    #welcome-bar {
+        background-color: #ef812d;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: -5;
+    }
+
+    #welcome-bar p {
+        font-size: 18px;
+        font-family: 'Funnel Display';
+        color: white;
+        margin: 0;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-body .btn {
+    margin-top: auto; /* Empurra o botão para baixo, respeitando o layout */
+}
+    #section{
+        background: rgb(239,129,45);
+        background: linear-gradient(221deg, rgba(239,129,45,1) 34%, rgba(251,198,0,1) 100%);
+    }
+
+    /* Aplicando o efeito a elementos com a classe fade-in */
+    .fade-in {
+        opacity: 0; /* Começa invisível */
+        animation: fadeIn 1.5s ease-out forwards; /* Duração de 1.5s */
+    }
+
+    /* Diferenciando os tempos de atraso para cada elemento */
+    .col-lg-6:nth-child(1) {
+        animation-delay: 0.5s; /* Começa após 0.5 segundos */
+    }
+
+    .col-lg-6:nth-child(2) {
+        animation-delay: 1s; /* Começa após 1 segundo */
+    }
+    .card-text {
+    margin-bottom: 10px; /* Define um espaço fixo */
+}
+    
+    </style>
+    <script>
+      document.addEventListener("scroll", function () {
+        const logo = document.getElementById("logo");
+
+        // Reduz o tamanho do logo se o scroll for maior que 50px
+        if (window.scrollY > 50) {
+            logo.style.width = "110px";  // Novo tamanho do logo
+            logo.style.height = "70px"; // Altura ajustada
+        } else {
+            logo.style.width = "180px"; // Tamanho original
+            logo.style.height = "105px"; // Altura original
+        }
+    });
+</script>
+</head>
+<body class="bg-light" >
+    <header>
+
+        <nav class="navbar navbar-light fixed-top bg-light text-center" style="margin: 0 ; padding: 0; justify-content: center; " >
+            <div id="welcome-bar">
+                <p style="font-size: small; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                  </svg> 11 95733-4690 | <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                  </svg> hotwatts.vendas@hotmail.com</p>
+            </div>
+            <div class="container text-center d-flex flex-column align-items-center" style="padding: 0; margin: 0;">
+                <!-- Logo centralizado com ID -->
+                <a class="navbar-brand" href="#" style="margin-bottom: 0;">
+                    <img id="logo" src="./img/logoHot.png" width="180px" height="105px" alt="Logo">
+                </a>
+        
+                <!-- Links -->
+                <div class="mt-1">
+                    <ul class="navbar-nav flex-row gap-4" style="font-size: 15px; font-family: 'Funnel Display';">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#Inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>  
+        <main style="padding-top: 100px;">
+            <h3 class="fw-bold " style="margin-left: 5%; margin-bottom: -3%; font-size:xx-large;">Todos os Produtos: </h3>
+            <hr style="color: #ef812d; margin: 5%" >
+            <div class="container my-5">
+                <!-- Primeira Linha -->
+                <div class="row mb-4">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center bg-light" style="width: 18rem;">
+                                <div class="card-body">
+                                    <!-- Contêiner fixo para imagens -->
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/resistencia-tubular-imersao.png" alt="Resistência Tubular para Aquecimento em Imersão" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RESISTÊNCIA TUBULAR PARA AQUECIMENTO EM IMERSÃO</p>
+                                    <a href="RESISTENCIATUBULARPARAAQUECIMENTOEMIMERSAO.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center bg-light" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/ResistenciaHermetica.png" alt="RESISTÊNCIA HERMÉTICA" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RESISTÊNCIA HERMÉTICA</p>
+                                    <a href="RESISTENCIAHERMETICA.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 3 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center bg-light" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/aletada_retangular.png" alt="ALETADA RETANGULAR" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold ">RESISTÊNCIA TUBULAR ALETADA</p>
+                                    <a href="RESISTENCIATUBULARALETADA.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Segunda Linha -->
+                <div class="row mb-4 bg-light">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <!-- Contêiner fixo para imagens -->
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/Aquecedor Elétrico de Tambor.png" alt="AQUECEDOR ELÉTRICO DE TAMBOR" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">AQUECEDOR ELÉTRICO DE TAMBOR</p>
+                                    <a href="AQUECEDORELETRICODETAMBOR.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/RESISTÊNCIA COLEIRA EM CERÂMICA.png" alt="RESISTÊNCIA COLEIRA EM CERÂMICA" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RESISTÊNCIA COLEIRA EM CERÂMICA</p>
+                                    <a href="RESISTENCIACOLEIRAEMCERAMICA.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 3 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/microtubular.png" alt="microtubular" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RESISTÊNCIA MICROTUBULAR</p>
+                                    <a href="RESISTENCIAMICROTUBULAR.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Terceira Linha -->
+                  <div class="row mb-4">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <!-- Contêiner fixo para imagens -->
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/traceamento.png" alt="TRACEAMENTO ELÉTRICO RETÂNGULAR E REDONDO" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">TRACEAMENTO ELÉTRICO RETÂNGULAR E REDONDO</p>
+                                    <a href="TRACEAMENTOELETRICORETANGULAREREDONDO.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/TubularFlexivel.png" alt="Resistência Tubular Flexível" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RESISTÊNCIA TUBULAR FLEXÍVEL</p>
+                                    <a href="RESISTENCIATUBULARFLEXIVEL.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 3 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/borda.png"alt="RESISTÊNCIA TUBULAR SOBRE BORDA" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RESISTÊNCIA TUBULAR SOBRE BORDA</p>
+                                    <a href="RESISTENCIATUBULARSOBREBORDA.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                 <!-- Quarta Linha -->
+                 <div class="row mb-4">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <!-- Contêiner fixo para imagens -->
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/termoestato.png" alt="TERMOSTATO CAPILAR" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">TERMOSTATO CAPILAR</p>
+                                    <a href="TERMOSTATOCAPILAR.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/capastermicas.png" alt="CAPAS TÉRMICAS" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">CAPAS TÉRMICAS</p>
+                                    <a href="CAPASTERMICAS.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 3 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/CARTUCHOS-ALTA-DENSIDADE.png" alt="CARTUCHO DE ALTA DENSIDADE" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">CARTUCHO DE ALTA DENSIDADE</p>
+                                    <a href="CARTUCHODEALTADENSIDADE.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quinta Linha -->
+                <div class="row mb-4">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light">
+                                    <!-- Contêiner fixo para imagens -->
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/infravermelho.png" alt="RADIADORES INFRAVERMELHO EM CERÂMICA" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RADIADORES INFRAVERMELHO EM CERÂMICA</p>
+                                    <a href="RADIADORESINFRAVERMELHOEMCERAMICA.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                                <div class="card-body bg-light" >
+                                    <div style="width: 200px; height: 200px; margin: 0 auto;">
+                                        <img src="./img/resistenciaparaforno.png" alt="RESISTÊNCIA PARA FORNOS" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </div>
+                                    <p class="card-text fw-bold">RESISTÊNCIA PARA FORNOS</p>
+                                    <a href="RESISTENCIAPARAFORNOS.html" class="btn btn-outline-dark">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 3 -->
+                        
+                    </div>
+                </div>
+        </main>
+    
+    <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+    <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=5511972736489">
+        <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+    </a>  
+    <hr style="color: #ef812d; margin: 5%" >
+    <footer class="text-body-secondary py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Coluna 1: Dados de contato -->
+                <div class="col-md-6">
+                    <p class="mb-1"><strong>Dados para contato:</strong></p>
+                    <p class="mb-0">Whatsapp: +55 11 95733-4690</p>
+                    <p class="mb-0">Email: dearibeiro_@hotmail.com  /  hotwatts.vendas@hotmail.com</p>
+                </div>
+                <!-- Coluna 2: Endereço -->
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1"><strong>Endereço:</strong></p>
+                    <p class="mb-1">Rua: Joaquim Lapas Veiga, 175</p>
+                    <p class="mb-0">Bairro: Jd Dabril, Cidade: Osaco-SP CEP: 06040-100</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

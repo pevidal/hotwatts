@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-bs-theme="light">
-<head id="Inicio">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Funnel+Display:wght@300..800&family=Gravitas+One&family=Lexend+Zetta:wght@100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Funnel+Display:wght@300..800&family=Gravitas+One&family=Lexend+Zetta:wght@100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Funnel+Display:wght@300..800&family=Gravitas+One&family=Lexend+Zetta:wght@100..900&family=Lexend:wght@100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Hotwatts</title>
-<style>
-    .bd-placeholder-img {
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Funnel+Display:wght@300..800&family=Gravitas+One&family=Lexend+Zetta:wght@100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Funnel+Display:wght@300..800&family=Gravitas+One&family=Lexend+Zetta:wght@100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Hotwatts</title>
+        <style>
+            .card {
+                border: none;
+            }
+            .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -101,10 +103,127 @@ html, body {
     .col-lg-6:nth-child(2) {
         animation-delay: 1s; /* Começa após 1 segundo */
     }
+        </style>
+           <script>
+            document.addEventListener("scroll", function () {
+            const logo = document.getElementById("logo");
     
-</style>
-<script>
-        document.addEventListener("scroll", function () {
+            // Reduz o tamanho do logo se o scroll for maior que 50px
+            if (window.scrollY > 50) {
+                logo.style.width = "80px";  // Novo tamanho do logo
+                logo.style.height = "60px"; // Altura ajustada
+            } else {
+                logo.style.width = "135px"; // Tamanho original
+                logo.style.height = "80px"; // Altura original
+            }
+        });
+    </script>    
+    <style>
+        .card {
+            border: none;
+        }
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+    #logo {
+    transition: all 0.3s ease; /* Suaviza a alteração do tamanho */
+
+}
+html, body {
+        margin: 0;
+        padding-top: 70px;
+        width: 100%;
+    }
+
+
+    #welcome-bar {
+        background-color: #ef812d;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: -5;
+    }
+
+    #welcome-bar p {
+        font-size: 18px;
+        font-family: 'Funnel Display';
+        color: white;
+        margin: 0;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-body .btn {
+    margin-top: auto; /* Empurra o botão para baixo, respeitando o layout */
+}
+    #section{
+        background: rgb(239,129,45);
+        background: linear-gradient(221deg, rgba(239,129,45,1) 34%, rgba(251,198,0,1) 100%);
+    }
+
+    /* Aplicando o efeito a elementos com a classe fade-in */
+    .fade-in {
+        opacity: 0; /* Começa invisível */
+        animation: fadeIn 1.5s ease-out forwards; /* Duração de 1.5s */
+    }
+
+    /* Diferenciando os tempos de atraso para cada elemento */
+    .col-lg-6:nth-child(1) {
+        animation-delay: 0.5s; /* Começa após 0.5 segundos */
+    }
+
+    .col-lg-6:nth-child(2) {
+        animation-delay: 1s; /* Começa após 1 segundo */
+    }
+    .card-text {
+    margin-bottom: 10px; /* Define um espaço fixo */
+}
+    
+    </style>
+    <script>
+      document.addEventListener("scroll", function () {
         const logo = document.getElementById("logo");
 
         // Reduz o tamanho do logo se o scroll for maior que 50px
@@ -118,10 +237,9 @@ html, body {
     });
 </script>
 </head>
-<body  >
-    <header >
+<body class="bg-light" >
+    <header>
 
-    
         <nav class="navbar navbar-light fixed-top bg-light text-center" style="margin: 0 ; padding: 0; justify-content: center; " >
             <div id="welcome-bar">
                 <p style="font-size: small; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -138,7 +256,7 @@ html, body {
         
                 <!-- Links -->
                 <div class="mt-1">
-                    <ul class="navbar-nav flex-row gap-4" style="font-size: 25px; font-family: 'Funnel Display';">
+                    <ul class="navbar-nav flex-row gap-4" style="font-size: 15px; font-family: 'Funnel Display';">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#Inicio">Início</a>
                         </li>
@@ -152,71 +270,31 @@ html, body {
                 </div>
             </div>
         </nav>
-    
-    </header>    
+    </header> 
         <main>
-           
-               <section id="section" class="py-5" style="min-height: 70vh; display: flex; align-items: center; width: 100vw; padding-top: 50px;">
-                <div class="container-fluid">
-                    <div class="row w-100">
+            <section class="py-5 bg-light" style="min-height: 90vh; display: flex; align-items: top; width: 100vw; height: 200px; ">
+                <div class="container">
+                    <h5>Produto:</h5>
+                    <h3>RESISTÊNCIA COLEIRA EM CERÂMICA</h3> 
+                    <br>
+                    <img src="./img/RESISTÊNCIA COLEIRA EM CERÂMICA.png" alt="" width="366" height="285">
+
+
+                    <h5>Descrição: </h5>
+                    <p>Aquecedores elétricos de baldes e tambores para fluxo rápido de materiais viscosos semissólidos e sólidos.
+
+                        <br>
+                        <br><strong>Aplicações:</strong> 
+                        <br>Aquecedores elétricos de baldes e tambores para aquecimento rápido e seguro, derretimento, degelo de resinas solidas e semissólidas, graxas, adesivos, massas, melaços, gorduras e materiais viscosos e similares.                   
                         
-                        <div class="col-lg-6 col-md-12 text-center fade-in" style="margin-top: 2%;">
-                            <img style="width: 500px; height: 250px;" src="./img/logoHot.png" alt="Logo">
-                        </div>
-                        <div class="col-lg-6 col-md-12 text-right mb-4 fw-bold fade-in" style="color: black;">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <h4 id="Contato" style="font-family: Lexend; color: white; font-size: xx-large;">
-                                Oferecendo melhores tecnologias de aquecimento para sua empresa!
-                            </h4>
-                            <p><a href="produtos.html" class="btn btn-outline-light my-2">Ver Produtos</a></p>
-                        </div>
-                    </div>
-                </div>
+                    </p>
+                    
+                </div>                
             </section>
-            
-
-         
-            
-
-
-            <div class="row featurette" style="margin: 5%;" >
-              <form  action="https://formspree.io/f/xqkoklqp"  method="POST">
-                <h2 class="featurette-heading " style="font-family: Lexend;">Precisa de mais informações? Fale conosco! </h2>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nome
-                    </label>
-                    <input type="email" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="Jose Maria">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email
-                    </label>
-                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Telefone
-                    </label>
-                    <input type="email" name="telefone" class="form-control" id="exampleFormControlInput1" placeholder="11-99999-9999">
-                </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-                <textarea  name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-              <div class="text-end">
-                <button type="submit" class="btn btn-secondary" style="margin-right: 10%;">Enviar</button>
-            </div>
-            
-            </div>
-         
-            </form>
-            
-            <br>
-
+<br>
+<br>
         </main>
-    
-    <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+        <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
     <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=5511957334690">
         <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
     </a>  
@@ -239,9 +317,5 @@ html, body {
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
+    </body>
 </html>

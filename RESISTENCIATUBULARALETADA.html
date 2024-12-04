@@ -24,11 +24,7 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+      
 
       .b-example-divider {
         width: 100%;
@@ -103,34 +99,8 @@ html, body {
     .col-lg-6:nth-child(2) {
         animation-delay: 1s; /* Começa após 1 segundo */
     }
-        </style>
-           <script>
-            document.addEventListener("scroll", function () {
-            const logo = document.getElementById("logo");
     
-            // Reduz o tamanho do logo se o scroll for maior que 50px
-            if (window.scrollY > 50) {
-                logo.style.width = "80px";  // Novo tamanho do logo
-                logo.style.height = "60px"; // Altura ajustada
-            } else {
-                logo.style.width = "135px"; // Tamanho original
-                logo.style.height = "80px"; // Altura original
-            }
-        });
-    </script>    
-    <style>
-        .card {
-            border: none;
-        }
-        .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
+    @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
@@ -220,8 +190,21 @@ html, body {
     .card-text {
     margin-bottom: 10px; /* Define um espaço fixo */
 }
+        </style>
+           <script>
+            document.addEventListener("scroll", function () {
+            const logo = document.getElementById("logo");
     
-    </style>
+            // Reduz o tamanho do logo se o scroll for maior que 50px
+            if (window.scrollY > 50) {
+                logo.style.width = "80px";  // Novo tamanho do logo
+                logo.style.height = "60px"; // Altura ajustada
+            } else {
+                logo.style.width = "135px"; // Tamanho original
+                logo.style.height = "80px"; // Altura original
+            }
+        });
+    </script>  
     <script>
       document.addEventListener("scroll", function () {
         const logo = document.getElementById("logo");
@@ -264,7 +247,7 @@ html, body {
                             <a class="nav-link" href="produtos.html">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Contato">Contato</a>
+                            <a class="nav-link" href="index.html#Contato">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -272,48 +255,58 @@ html, body {
         </nav>
     </header> 
         <main>
-            <section class="py-5 bg-light" style="min-height: 90vh; display: flex; align-items: top; width: 100vw; height: 200px; margin-top: 5%;">
+            <section class="py-5 bg-light" style="min-height: 90vh; display: flex; align-items: flex-start; justify-content: center; width: 100%; margin-top: 5%;">
                 <div class="container">
-                    <h5>Produto:</h5>
-                    <h3>RESISTÊNCIA TUBULAR ALETADA</h3> 
-                    <br>
-                    <img src="./img/aletada_retangular.png" alt="">
-                    <br>
-                    <br>
-                    <h5>Descrição: </h5>
-                    <p>As resistências do tipo tubular aletada são desenvolvidas para serem utilizadas no aquecimento de ar e gases industriais, fornos, estufas, aquecedores secadores e demais aplicações que necessitem de uma rápida dissipação de calor.
-
-                        <br>
-                        <br>
-                        <strong>Características da Resistência:</strong>                        
-                        <br>Blindagem: Em tubo de aço Inoxidável ou aço SAE 1020.
-                        <br>Isolação: Em Óxido de Magnésio importado.
-                        <br>Elemento de Aquecimento: em fio de Níquel Cromo Kanthal 80/20 dimensionado de acordo com a potência.
-                        <br>Aletas dissipadoras: do tipo “Lâmina” (Forma retangular) ou “Helicoidal” (Forma espiralada) podendo ser de aço Inoxidável ou aço SAE 1020 galvanizados.</p>
-                    
-                </div>                
+                    <div class="row">
+                        <!-- Coluna de imagem -->
+                        <h5>Produto:</h5>
+                        <h3>RESISTÊNCIA TUBULAR ALETADA</h3>
+                        <div class="col-12 col-md-6 text-center">
+                            
+                            <img src="./img/aletada_retangular.png" alt="Resistência Tubular Aletada" class="img-fluid">
+                        </div>
+                        <!-- Coluna de texto -->
+                        <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            
+                            
+                            <br>
+                            <h5>Descrição: </h5>
+                            <p>As resistências do tipo tubular aletada são desenvolvidas para serem utilizadas no aquecimento de ar e gases industriais, fornos, estufas, aquecedores secadores e demais aplicações que necessitem de uma rápida dissipação de calor.</p>
+                            <br>
+                            <strong>Características da Resistência:</strong>
+                            <ul>
+                                <li>Blindagem: Em tubo de aço Inoxidável ou aço SAE 1020.</li>
+                                <li>Isolação: Em Óxido de Magnésio importado.</li>
+                                <li>Elemento de Aquecimento: em fio de Níquel Cromo Kanthal 80/20 dimensionado de acordo com a potência.</li>
+                                <li>Aletas dissipadoras: do tipo “Lâmina” (Forma retangular) ou “Helicoidal” (Forma espiralada) podendo ser de aço Inoxidável ou aço SAE 1020 galvanizados.</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
             </section>
+            
 
         </main>
         <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
         <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=5511957334690">
             <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
-        </a> 
+        </a>
     <hr class="featurette-divider ">
-    <footer class="text-body-secondary py-5">
+    <footer class="text-body-secondary py-5 bg-light">
         <div class="container">
             <div class="row">
                 <!-- Coluna 1: Dados de contato -->
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <p class="mb-1"><strong>Dados para contato:</strong></p>
                     <p class="mb-0">Whatsapp: +55 11 95733-4690</p>
-                    <p class="mb-0">Email: dearibeiro_@hotmail.com  /  hotwatts.vendas@hotmail.com</p>
+                    <p class="mb-0">Email: dearibeiro_@hotmail.com / hotwatts.vendas@hotmail.com</p>
                 </div>
                 <!-- Coluna 2: Endereço -->
-                <div class="col-md-6 text-md-end">
+                <div class="col-12 col-md-6 text-md-end">
                     <p class="mb-1"><strong>Endereço:</strong></p>
                     <p class="mb-1">Rua: Joaquim Lapas Veiga, 175</p>
-                    <p class="mb-0">Bairro: Jd Dabril, Cidade: Osaco-SP CEP: 06040-100</p>
+                    <p class="mb-0">Bairro: Jd Dabril, Cidade: Osasco-SP CEP: 06040-100</p>
                 </div>
             </div>
         </div>

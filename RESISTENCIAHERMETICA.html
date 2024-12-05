@@ -163,6 +163,7 @@ html, body {
         margin: 0;
         padding-top: 70px;
         width: 100%;
+        font-family: 'Funnel Display', sans-serif;
     }
 
 
@@ -220,6 +221,11 @@ html, body {
     .card-text {
     margin-bottom: 10px; /* Define um espaço fixo */
 }
+@media (max-width: 768px) {
+    main {
+        padding-top: 15%; /* Altura do navbar considerando telas menores */
+    }
+}
     
     </style>
     <script>
@@ -240,58 +246,60 @@ html, body {
 <body class="bg-light" >
     <header>
 
-        <nav class="navbar navbar-light fixed-top bg-light text-center" style="margin: 0 ; padding: 0; justify-content: center; " >
+        <nav class="navbar navbar-light fixed-top bg-light text-center" style="justify-content: center; margin-top: -8px;">
             <div id="welcome-bar">
-                <p style="font-size: small; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                  </svg> 11 95733-4690 | <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                  </svg> hotwatts.vendas@hotmail.com</p>
+                <p>
+                    <i class="fa fa-whatsapp"></i> 11 95733-4690 |
+                    <i class="fa fa-envelope"></i> hotwatts.vendas@hotmail.com
+                </p>
             </div>
-            <div class="container text-center d-flex flex-column align-items-center" style="padding: 0; margin: 0;">
-                <!-- Logo centralizado com ID -->
-                <a class="navbar-brand" href="#" style="margin-bottom: 0;">
-                    <img id="logo" src="./img/logoHot.png" width="180px" height="105px" alt="Logo">
+            <div class="container text-center d-flex flex-column align-items-center">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="./img/logoHot.png" alt="Logo Hotwatts" style="height: 105px; width: 180px;">
                 </a>
-        
-                <!-- Links -->
-                <div class="mt-1">
-                    <ul class="navbar-nav flex-row gap-4" style="font-size: 15px; font-family: 'Funnel Display';">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#Inicio">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="produtos.html">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Contato">Contato</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav flex-row gap-4 mt-1" style="font-size: 18px;">
+                    <li class="nav-item"><a class="nav-link" href="index.html#Inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Contato">Contato</a></li>
+                </ul>
             </div>
         </nav>
     </header> 
         <main>
-            <section class="py-5 bg-light" style="min-height: 90vh; display: flex; align-items: top; width: 100vw; height: 200px; margin-top: 5%;">
-                <div class="container">
-                    <h5>Produto:</h5>
-                    <h3>RESISTÊNCIA HERMÉTICA</h3> 
-                    <br>
-                    <img src="./img/ResistenciaHermetica.png" alt="">
-                    <br>
-                    <br>
-                    <h5>Descrição: </h5>
-                    <p>A resistência hermética tem um corpo tubular altamente compactado, completamente selado contra agentes externos: plásticos derretidos, óleos, água, etc. Possui excelente rigidez mecânica e uma alta densidade de watts, permitindo um rápido e seguro meio de alcançar a temperatura de trabalho necessária.<br>
-                        <br>
-                        <strong>DADOS TÉCNICOS:</strong>                        
-                        <br>Blindagem em latão (aço inox, para materiais corrosivos, por exemplo, PVC, Nylon, etc.).
-                        <br>Densidade máxima superficial até 5,0 W/cm².
-                        <br>Temperatura máxima até 280ºC.
-                        <br>Rabicho de níquel isolado resistente à alta temperatura revestido com malha shieldada.</p>
-                    
-                </div>                
-            </section>
 
+            <section class="py-5 bg-light" style="min-height: 90vh; display: flex; align-items: flex-start; justify-content: center; width: 100%; margin-top: 5%;">
+                <div class="container">
+                    <div class="row">
+                        <!-- Título do Produto -->
+                        <div class="col-12   mb-4">
+                            <h5>Produto:</h5>
+                            <h3>RESISTÊNCIA HERMÉTICA</h3>
+                        </div>
+            
+                        <!-- Coluna de imagem -->
+                        <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
+                            <img src="./img/ResistenciaHermetica.png" alt="RESISTÊNCIA HERMÉTICA" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Coluna de texto -->
+                        <div class="col-12 col-md-12">
+                            <br>
+                            <h5>Descrição:</h5>
+                            <p>A resistência hermética tem um corpo tubular altamente compactado, completamente selado contra agentes externos: plásticos derretidos, óleos, água, etc. Possui excelente rigidez mecânica e uma alta densidade de watts, permitindo um rápido e seguro meio de alcançar a temperatura de trabalho necessária.</p>
+                            <br>
+                            <strong>Características da Resistência:</strong>
+                            <ul>
+                                <li>Blindagem em latão (aço inox, para materiais corrosivos, por exemplo, PVC, Nylon, etc.).</li>
+                                <li>Densidade máxima superficial até 5,0 W/cm².</li>
+                                <li>Temperatura máxima até 280ºC.</li>
+                                <li>Rabicho de níquel isolado resistente à alta temperatura revestido com malha shieldada.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
         </main>
         <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
         <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=5511957334690">
